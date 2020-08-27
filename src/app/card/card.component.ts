@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import {CardsService} from '../shared/cards.service';
 
 @Component({
@@ -6,13 +6,10 @@ import {CardsService} from '../shared/cards.service';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent{
 
   @Output() changeTitle = new EventEmitter<string>()
   constructor(public cardsService: CardsService) {
-  }
-
-  ngOnInit(): void {
   }
 
   setTitle(tag: string): void {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Card, CardsService} from '../shared/cards.service';
+import {CardsService} from '../shared/cards.service';
 
 @Component({
   selector: 'app-grouped-cards',

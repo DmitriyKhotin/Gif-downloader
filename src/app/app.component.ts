@@ -6,6 +6,7 @@ import {Card, CardsService} from './shared/cards.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
   constructor(public cardsService: CardsService) {
@@ -14,8 +15,6 @@ export class AppComponent {
   title = ''
 
   groupBtn: 'Разруппировать' | 'Группировать' = 'Группировать'
-
-  disabled = this.cardsService.loading;
 
   loadCard(): void {
     if (this.title) {
