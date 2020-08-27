@@ -1,0 +1,12 @@
+.cardBlock{
+  border: 1px solid black;
+  margin-left: 4px;
+}
+
+.subTitle{
+  display: block;
+  font-size: 18px;
+  font-family: "Roboto Light", serif;
+  margin-left: 6px;
+}
+

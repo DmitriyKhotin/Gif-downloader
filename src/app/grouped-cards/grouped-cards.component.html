@@ -1,0 +1,4 @@
+<div *ngFor="let cards of this.cardsService.cards | keyvalue" class="cardBlock">
+  <span class="subTitle">{{ cards.key }}</span>
+  <img *ngFor="let card of cards.value" src="{{card.image_url}}" [alt]="card.tag" class="image">
+</div>

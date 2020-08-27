@@ -1,0 +1,3 @@
+<div *ngFor="let card of cardsService.cards; let i = index" class="card">
+  <img [src]="card.image_url" [alt]="card.tag" class="image" (click)="setTitle(card.tag)"/>
+</div>
