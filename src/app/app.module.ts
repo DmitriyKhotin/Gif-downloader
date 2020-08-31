@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import {FormsModule} from '@angular/forms';
 import { GroupedCardsComponent } from './grouped-cards/grouped-cards.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    GroupedCardsComponent
+    GroupedCardsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
