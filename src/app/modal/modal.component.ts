@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {CardsService} from '../shared/cards.service';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent{
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(public cardsService: CardsService) {
   }
 
 }

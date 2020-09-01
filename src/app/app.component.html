@@ -9,5 +9,6 @@
   </div>
   <app-card (changeTitle)="changeTitle($event)" *ngIf="groupBtn === 'Группировать'"></app-card>
   <app-grouped-cards *ngIf="groupBtn === 'Разруппировать'"></app-grouped-cards>
+  <app-modal></app-modal>
 </div>
 

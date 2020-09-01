@@ -1,1 +1,6 @@
-<p>modal works!</p>
+<div class="modal-wrapper" *ngIf="this.cardsService.modal.vision">
+  <div class="modal-container" >
+    <button class="closeWindow" (click)="this.cardsService.modal.vision = false"></button>
+    <span class="title">{{ this.cardsService.modal.title }}</span>
+  </div>
+</div>

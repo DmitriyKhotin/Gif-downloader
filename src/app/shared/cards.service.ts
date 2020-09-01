@@ -7,12 +7,21 @@ export interface Card {
   tag: string
 }
 
+export interface Modal {
+  title: string
+  vision: boolean
+}
 @Injectable({ providedIn: 'root' })
 
 export class CardsService {
-  public cards: Card[] = []
-  public groupCards: Card[] = []
+  cards: Card[] = []
+  groupCards: Card[] = []
+
   loading = false
+  modal: Modal = {
+    title: '',
+    vision: false
+  }
 
   loadCard(tag: string): never | any {
     this.loading = true
@@ -32,10 +41,15 @@ export class CardsService {
             tag
           })
         }
-        else
-          alert('По тегу ничего не найдено')
+        else {
+          this.modal.vision = true
+          this.modal.title = 'По тегу ничего не найдено'
+        }
       })
-      .catch(() => alert('Произошла http ошибка'))
+      .catch(() => {
+        this.modal.vision = true
+        this.modal.title = 'Произошла http ошибка'
+      })
       .finally(() => {
         this.loading = false
       })

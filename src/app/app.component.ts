@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Card, CardsService} from './shared/cards.service';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import {Card, CardsService} from './shared/cards.service';
 })
 
 export class AppComponent {
+
 
   constructor(public cardsService: CardsService) {
   }
@@ -20,8 +22,10 @@ export class AppComponent {
     if (this.title) {
       this.cardsService.loadCard(this.title)
     }
-    else
-      alert('Заполните поле')
+    else {
+      this.cardsService.modal.vision = true
+      this.cardsService.modal.title = "Заполните поле.."
+    }
   }
 
   deleteAll(): void {

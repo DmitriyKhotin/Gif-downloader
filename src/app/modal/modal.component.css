@@ -1,0 +1,38 @@
+.modal-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(207, 205, 205, 0.3);
+}
+.modal-container{
+  height: 250px;
+  width: 300px;
+  border: 3px solid #a9a7a7;
+  border-radius: 20px;
+  background: #ffffff;
+  margin: 200px auto;
+}
+
+.closeWindow{
+  display: block;
+  height: 16px;
+  width: 16px;
+  margin-left: 267px;
+  margin-top: 7px;
+  background: url('../../assets/close.png');
+  border: none;
+}
+
+.title{
+  display: block;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 78px;
+}
+
+.closeWindow:focus{
+  outline: none;
+}
